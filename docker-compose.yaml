@@ -1,0 +1,11 @@
+services:
+  dev-win:
+    image: jupyter/datascience-notebook:latest
+    volumes: 
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    ports:
+      - ${EXT_PORT}:8888
+
+      
